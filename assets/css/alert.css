@@ -1,0 +1,62 @@
+/*selectAlert*/
+/*filePathAlert*/
+
+#alertContainer {
+    position: fixed;
+    margin: 20px auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+}
+
+#selectAlert {
+    display: none;
+    /*display: flex;*/
+    justify-content: space-around;
+    align-items: center;
+    width: 570px;
+    height: 62px;
+}
+
+#filePathAlert {
+    display: none;
+    /*display: flex;*/
+    justify-content: space-around;
+    align-items: center;;
+    width: 400px;
+    height: 62px;
+}
+
+#noFiles{
+    display: none;
+    /*display: flex;*/
+    justify-content: space-around;
+    align-items: center;;
+    width: 270px;
+    height: 62px;
+}
+
+.alertClass {
+    font-family: 'NanumSquareL', serif;
+    /*visibility: hidden;*/
+    transition: 0.3s;
+    opacity: 0;
+    width: 550px;
+    background: #ff4545;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.alertClass .material-symbols-outlined {
+    position: static;
+    display: block;
+    margin-left: 0;
+    left: unset;
+}
+
+.alertClass p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,24 @@
+@font-face{
+    font-family:'NanumSquareR';
+    src: url('./nanum-square/NanumSquareR.ttf') format('truetype')
+}
+
+
+@font-face{
+    font-family:'NanumSquareB';
+    src: url('./nanum-square/NanumSquareB.ttf') format('truetype')
+}
+
+
+@font-face{
+    font-family:'NanumSquareEB';
+    src: url('./nanum-square/NanumSquareEB.ttf') format('truetype')
+}
+
+
+@font-face{
+    font-family:'NanumSquareL';
+    src: url('./nanum-square/NanumSquareL.ttf') format('truetype')
+}
+
+

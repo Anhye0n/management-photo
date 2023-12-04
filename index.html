@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Management-Photo</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+  <link rel="stylesheet" href="./assets/css/default.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/alert.css">
+
+  <link rel="stylesheet" href="./assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div id="alertContainer">
+  <div id="selectAlert" class="alertClass">
+    <span class="material-symbols-outlined">
+      warning
+    </span>
+    <p>노이즈 감소 제거, 날짜별로 폴더 정리 둘 중 선택하셔야됩니다.</p>
+  </div>
+  <div id="filePathAlert" class="alertClass">
+    <span class="material-symbols-outlined">
+      warning
+    </span>
+    <p>폴더 경로가 설정되지 않았습니다.</p>
+  </div>
+  <div id="noFiles" class="alertClass">
+    <span class="material-symbols-outlined">
+      warning
+    </span>
+    <p>설정할 파일이 없습니다.</p>
+  </div>
+</div>
+<div id="mainUi">
+  <div class="container">
+    <div id="radioContainer">
+      <input type="radio" id="changeNoiseReduce" class="radioStyles" value="ChangeNoiseReduce" name="selectWorkType"
+      >
+      <label for="changeNoiseReduce" onclick="hideRadioOptions()">노이즈 감소 제거</label>
+
+      <input type="radio" id="sortByDate" class="radioStyles" value="SortByDate" name="selectWorkType"
+      >
+      <label for="sortByDate" onclick="viewRadioOptions()">날짜별로 파일 정리</label>
+    </div>
+
+    <div id="radioOptionsContainer">
+      <input type="checkbox" id="exceptFolderOption" value="ExceptFolderOption" name="exceptFolderOption">
+      <label for="exceptFolderOption">이미지, raw 파일만 정리(폴더, .zip, 문서 등 다른 파일 제외)</label>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="inputContainer">
+      <input type="text" id="folderPathStyle" name="folderPath">
+      <span class="material-symbols-outlined" onclick="startWork()">play_arrow</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="logsContainer">
+      <div id="logsTitle">
+        Logs
+      </div>
+      <ol id="logsContents">
+
+      </ol>
+      <div id="lastWorkAlert">
+
+      </div>
+    </div>
+  </div>
+</div>
+<p id="version">Ver. 1.0.0</p>
+<p id="iconLicense">ⓒ 2023. <span onclick="op()" style="text-decoration: underline; cursor: pointer">anhye0n</span> all rights reserved.
+  / Icons by Flaticon(Hilmy Abiyyu A.)</p>
+
+<script src="./plugins/radio.js"></script>
+<script src="./plugins/core.js"></script>
+<script>
+    const { shell } = require("electron")
+
+    function op() {
+        shell.openExternal("https://github.com/Anhye0n")
+    }
+
+</script>
+</body>
+</html>

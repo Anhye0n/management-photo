@@ -1,0 +1,148 @@
+@import "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0";
+
+#version{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    color: #bbbbbb;
+    text-align: center;
+}
+
+#iconLicense{
+    margin-top: 5px;
+    margin-left: 10px;
+    color: #bbbbbb;
+    text-align: center;
+}
+
+#mainUi {
+    width: 800px;
+    / / text-align: center;
+    margin: 100px auto auto;
+}
+
+#radioContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background: #1f2022;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.radioStyles {
+    display: none;
+}
+
+label[for="changeNoiseReduce"], label[for="sortByDate"] {
+    cursor: pointer;
+    display: block;
+    font-size: 1.2rem;
+    padding: 12px 22px 12px 22px;
+    border-radius: 5px;
+    margin: 20px;
+    transition: 0.3s;
+    /*background: #313133;*/
+    /*color: #dcdcdc;*/
+    color: #626262;
+    user-select: none;
+}
+
+#exceptFolderOption{
+    display: none;
+}
+
+#radioOptionsContainer{
+    display: none;
+    text-align: center;
+}
+
+
+label[for="exceptFolderOption"] {
+    cursor: pointer;
+    display: block;
+    font-size: 1.1rem;
+    padding: 12px 22px 12px 22px;
+    border-radius: 5px;
+    transition: 0.3s;
+    /*background: #313133;*/
+    /*color: #dcdcdc;*/
+    color: #626262;
+    user-select: none;
+}
+
+
+#exceptFolderOption:checked + label {
+    color: #cccccc;
+    background: #313133;
+    transition: 0.3s;
+}
+
+input[type="radio"]:checked + label {
+    color: #cccccc;
+    background: #313133;
+    transition: 0.3s;
+}
+
+#inputContainer {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+#folderPathStyle {
+    display: block;
+    width: 100%;
+    padding: 15px 50px 15px 15px;
+    color: #cccccc;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    background: #232325;
+}
+
+.material-symbols-outlined {
+    position: absolute;
+    left: 50%;
+    font-size: 2.5rem;
+    color: #38383A;
+    margin-left: 345px;
+    display: block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.material-symbols-outlined:hover {
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+#logsContainer {
+    padding: 30px 50px 20px 50px;
+}
+
+#logsTitle {
+    font-family: 'NanumSquareB', serif;
+    font-size: 1.5rem;
+}
+
+#logsContents {
+    font-size: 1.2rem;
+    padding-left: 30px;
+}
+
+#logsContents li {
+    font-family: 'NanumSquareL', serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+li::marker {
+    font-family: 'NanumSquareR', serif;
+}
+
+#lastWorkAlert {
+    text-align: center;
+}

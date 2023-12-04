@@ -1,0 +1,59 @@
+{
+  "name": "management-photo",
+  "version": "1.0.0",
+  "description": "Management Photo",
+  "main": "main.js",
+  "author": "AnHye0n",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "deploy:osx": "electron-builder --mac",
+    "deploy:win": "npm run deploy:win32 && npm run deploy:win64",
+    "deploy:win32": "electron-builder --win nsis:ia32",
+    "deploy:win64": "electron-builder --win nsis:x64"
+  },
+  "devDependencies": {
+    "electron": "^27.1.2",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "build": {
+    "productName": "management-photo",
+    "appId": "com.mp.electron",
+    "asar": true,
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "build/icons/icon.ico"
+    },
+    "dmg": {
+      "title": "Management Photo",
+      "icon": "build/icons/icon.ico"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": false,
+      "perMachine": true,
+      "language": 1042,
+      "installerIcon": "build/icons/icon.ico",
+      "shortcutName": "MP",
+      "artifactName": "ManagementPhoto-${version}.${ext}",
+      "uninstallDisplayName": "Management Photo"
+    },
+    "directories": {
+      "buildResources": "./build/",
+      "output": "./dist/32bit"
+    }
+  }
+}
