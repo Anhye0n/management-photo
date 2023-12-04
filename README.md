@@ -19,11 +19,13 @@ npm install
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
+npm start
 ```
 
 ### Compile and Minify for Production
-
+### Check Package.json
 ```sh
-npm run build
+npm run deploy:osChoice
+
+
 ```
